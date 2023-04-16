@@ -4,13 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
+
 @Getter
 @Setter
 public class User {
-    private String sender;
+    private @Getter String sender;
 
-    private String password;
+    private @Getter String password;
 
     public User(String name , String password){
         this.sender = name;

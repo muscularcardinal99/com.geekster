@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class CustomConfig {
 
     @Bean
-    public User getUser1(){
+    public User getUser(){
         System.out.println("Spring call...in CustomConfig of User");
         return new User(ConstantsForMail.SENDER,ConstantsForMail.PASSWORD);
 

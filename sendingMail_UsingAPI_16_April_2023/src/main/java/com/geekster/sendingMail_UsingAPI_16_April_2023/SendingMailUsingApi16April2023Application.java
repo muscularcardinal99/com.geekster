@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SendingMailUsingApi16April2023Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SendingMailUsingApi16April2023Application.class, args);
+
+		System.out.println("This application will now send mail using API");
+		HandelMail mail = new HandelMail();
+		mail.sendMail();
 	}
 
 }

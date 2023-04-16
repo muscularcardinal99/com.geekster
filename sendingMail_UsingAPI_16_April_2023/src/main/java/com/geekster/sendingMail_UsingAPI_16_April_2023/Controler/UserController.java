@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class UserController {
     @Autowired
-    static User defaultUser;
-
-    @GetMapping("/User")
+      static User defaultUser;
+    @GetMapping("/user")
     public static User getUser(){return defaultUser; }
 }

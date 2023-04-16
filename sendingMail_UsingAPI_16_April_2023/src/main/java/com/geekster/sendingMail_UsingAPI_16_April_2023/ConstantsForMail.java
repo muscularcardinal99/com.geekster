@@ -19,7 +19,7 @@ public class ConstantsForMail {
     public static final String SUBJECT = "Weekly test :16 April 2023";
 
     //Body of e-mail
-    public static final String BODY ="This is the place holder body of mail for weekly test ,\nheld on April 16th of 2023";
+    public static final String BODY ="This is the place holder body of mail for weekly test ,held on April 16th of 2023";
 
 
 
