@@ -38,7 +38,7 @@ public class HandleMail {
             mimeMessage.setFrom(MailConstants.SENDER);
 
             //receiver
-            mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(MailConstants.RECEIVERMAILADDRESS));
+            mimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(MailConstants.RECEVERMAILADDRESS));
 
             //subject
             mimeMessage.setSubject(MailConstants.SUBJECT);
