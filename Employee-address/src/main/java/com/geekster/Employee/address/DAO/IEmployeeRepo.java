@@ -13,8 +13,8 @@ import java.util.List;
 public interface IEmployeeRepo extends CrudRepository<Employee,Long> {
     @Query(value = "select * from employee",nativeQuery = true)
     List<Employee> getAllEmployee();
-//    @Query(value = "Select * from employee where id = :id ", nativeQuery = true)
-//    Employee getEmployee(Long id);
+    @Query(value = "Select * from employee where id = :id ", nativeQuery = true)
+    Employee getEmployee(Long id);
     @Modifying
     @Query(nativeQuery = true,value = "update employee set first_name = ':firstName'  where id = :id")
     void updateFirstName(String firstName, Long id);
