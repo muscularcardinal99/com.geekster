@@ -23,6 +23,7 @@ public class Address {
     private String state;
     private String country;
 
-//    @ManyToOne
-//    private  Student student;
+    @OneToOne
+    @JoinColumn(name =  "student_id")
+    private  Student student;
 }

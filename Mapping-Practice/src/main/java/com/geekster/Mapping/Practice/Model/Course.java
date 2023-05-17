@@ -15,13 +15,13 @@ import java.util.List;
 public class Course {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String ID;
     private String title;
     private String description;
     private String duration;
 
     @ManyToMany
+    @JoinColumn(name = "student id")
     List<Student> studentList;
 
 }

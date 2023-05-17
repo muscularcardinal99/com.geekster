@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "Students")
@@ -13,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
     private String age;
@@ -21,6 +23,15 @@ public class Student {
     private String branch;
     private String department;
 
-    @OneToOne
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
     private Address address;
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    private Laptop laptop;
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.PERSIST)
+    private List<Book> bookList;
+
+    @ManyToMany(mappedBy = "studentList", cascade = CascadeType.PERSIST)
+    List<Course> courses;
+
 }
