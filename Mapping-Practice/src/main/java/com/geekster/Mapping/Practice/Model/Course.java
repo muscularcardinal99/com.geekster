@@ -20,8 +20,8 @@ public class Course {
     private String description;
     private String duration;
 
-    @ManyToMany
-    @JoinColumn(name = "student id")
-    List<Student> studentList;
+//    @ManyToMany
+//    @JoinColumn(name = "student_id")
+//    List<Student> studentList;
 
 }

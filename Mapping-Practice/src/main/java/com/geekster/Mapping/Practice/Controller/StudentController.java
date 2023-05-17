@@ -28,4 +28,9 @@ public class StudentController {
         return studentService.getAll();
     }
 
+    @DeleteMapping("/deleteStudent/{id}")
+    public ResponseEntity<String> deleteStudent(@PathVariable String id){
+        return studentService.deleteStudent(id);
+    }
+
 }

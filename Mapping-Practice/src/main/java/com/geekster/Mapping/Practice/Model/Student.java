@@ -23,15 +23,21 @@ public class Student {
     private String branch;
     private String department;
 
-    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
+//            (mappedBy = "student", cascade = CascadeType.ALL)
     private Address address;
-    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToOne
+//            (cascade = CascadeType.ALL)
+            (mappedBy = "student", cascade = CascadeType.ALL)
     private Laptop laptop;
 
-    @OneToMany(mappedBy = "student",cascade = CascadeType.PERSIST)
+    @OneToMany
+//            (cascade = CascadeType.ALL)
+            (mappedBy = "student",cascade = CascadeType.ALL)
     private List<Book> bookList;
 
-    @ManyToMany(mappedBy = "studentList", cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = CascadeType.PERSIST)
+//            (mappedBy = "studentList", cascade = CascadeType.ALL)
     List<Course> courses;
 
 }

@@ -19,8 +19,8 @@ public class Book {
     private String description;
     private String price;
 
-    @ManyToOne
-    @JoinColumn(name = "student_id")
-    private Student student;
+//    @ManyToOne
+//    @JoinColumn(name = "student_id")
+//    private Student student;
 
 }
