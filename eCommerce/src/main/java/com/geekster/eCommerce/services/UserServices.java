@@ -1,2 +1,4 @@
-package com.geekster.eCommerce.services;public class UserServices {
+package com.geekster.eCommerce.services;
+
+public class UserServices {
 }

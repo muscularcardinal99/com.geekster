@@ -2,12 +2,14 @@ package com.geekster.Employee.address.Service;
 
 import com.geekster.Employee.address.DAO.IEmployeeRepo;
 import com.geekster.Employee.address.Model.Employee;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Transactional
 public class EmployeeService {
     @Autowired
     IEmployeeRepo employeeRepo;
@@ -35,7 +37,10 @@ public class EmployeeService {
         if (!employee.getLastName().equals("")||employee.getLastName()!=null){
             employeeRepo.updateLastName(employee.getLastName(),id);
         }
-        return "Data Updated";
+        if(employee.getAddress()!=null){
+            employeeRepo.updateEmployeeAddress(employee.getAddress(),id);
+        }
+        return "Data Updated Successfully";
     }
 
     public String deleteEmployee(Long id) {

@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "employee")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-//    @Pattern(regexp = "(^|\\\\s)[A-Z][a-z]*")
+    @Pattern(regexp = "(^|\\\\s)[A-Z][a-z]*")
     private String firstName;
-//    @Pattern(regexp = "(^|\\\\s)[A-Z][a-z]*")
+    @Pattern(regexp = "(^|\\\\s)[A-Z][a-z]*")
     private String lastName ;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_address_id", referencedColumnName = "id")

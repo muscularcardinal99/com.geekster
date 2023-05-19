@@ -25,6 +25,6 @@ public interface IAddressRepo extends CrudRepository<Address,Long> {
     @Query(value ="update address set street = :street where id = :id",nativeQuery = true )
     void updateStreet(String street, Long id);
     @Modifying
-    @Query(value ="update address set zipCode = :zipCode where id = :id",nativeQuery = true )
+    @Query(value ="update address set zip_code = :zipCode where id = :id",nativeQuery = true )
     void updateZipCode(String zipCode, Long id);
 }

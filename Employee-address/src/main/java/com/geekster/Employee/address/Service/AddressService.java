@@ -2,11 +2,13 @@ package com.geekster.Employee.address.Service;
 
 import com.geekster.Employee.address.DAO.IAddressRepo;
 import com.geekster.Employee.address.Model.Address;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@Transactional
 public class AddressService {
     @Autowired
     IAddressRepo addressRepo;
@@ -30,19 +32,32 @@ public class AddressService {
         if(address.getCity()!=null){
             addressRepo.updateCity(address.getCity(), id);
             return "City updated successfully!!!!!!!!";
+        }else if(!address.getCity().equals("")){
+            addressRepo.updateCity(address.getCity(), id);
+            return "City updated successfully!!!!!!!!";
         }
         if(address.getState()!=null){
+            addressRepo.updateState(address.getState(), id);
+            return "State updated successfully!!!!!!!!";
+        }else if(!address.getState().equals("")){
             addressRepo.updateState(address.getState(), id);
             return "State updated successfully!!!!!!!!";
         }
         if(address.getStreet()!=null){
             addressRepo.updateStreet(address.getStreet(), id);
             return "Street updated successfully!!!!!!!!";
+        }else if(!address.getStreet().equals("")){
+            addressRepo.updateStreet(address.getStreet(), id);
+            return "Street updated successfully!!!!!!!!";
         }
         if(address.getZipCode()!=null){
             addressRepo.updateZipCode(address.getZipCode(), id);
             return "ZipCode updated successfully!!!!!!!!";
+        }else if(!address.getZipCode().equals("")){
+            addressRepo.updateZipCode(address.getZipCode(), id);
+            return "ZipCode updated successfully!!!!!!!!";
         }
+        
         return "pleas enter valid changes";
 
     }

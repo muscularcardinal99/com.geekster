@@ -42,37 +42,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>better</groupId>
-            <artifactId>better</artifactId>
-            <version>0.1.1</version>
-        </dependency>
-		<dependency>
-			<groupId>better</groupId>
-			<artifactId>better</artifactId>
-			<version>0.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>better</groupId>
-			<artifactId>better</artifactId>
-			<version>0.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>better</groupId>
-			<artifactId>better</artifactId>
-			<version>0.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>better</groupId>
-			<artifactId>better</artifactId>
-			<version>0.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>better</groupId>
-			<artifactId>better</artifactId>
-			<version>0.1.1</version>
-		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>

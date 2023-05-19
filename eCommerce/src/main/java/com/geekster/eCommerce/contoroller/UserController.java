@@ -1,2 +1,4 @@
-package com.geekster.eCommerce.contoroller;public class UserController {
+package com.geekster.eCommerce.contoroller;
+
+public class UserController {
 }

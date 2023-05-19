@@ -1,4 +1,4 @@
-package com.geekster.eCommerce.contoroller;
+package com.geekster.eCommerce.model;
 
 public class Users {
 }

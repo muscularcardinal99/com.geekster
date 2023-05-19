@@ -1,2 +1,16 @@
-package com.geekster.UrlHitCounter.model;public class User {
+package com.geekster.UrlHitCounter.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
+    private String userName;
+    private int hitCount;
+
 }
