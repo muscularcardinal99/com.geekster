@@ -79,7 +79,7 @@ The project relies on the following dependencies:
 Please refer to the `pom.xml` file for the specific versions of these dependencies.
 
 ## Authors
-- [Your Name](https://github.com/yourusername)
+- [Abhishek Kushwaha](https://github.com/muscularcardinal99)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
