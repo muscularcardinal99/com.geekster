@@ -1,14 +1,22 @@
 package com.geekster.RandomJokes.Controller;
+import com.geekster.RandomJokes.DAO.JokesRepo;
 import org.json.JSONObject;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class JokesController {
 
     public static void main(String[] args) throws Exception {
+        JokesRepo jokesRepo =new JokesRepo();
+        jokesRepo.setJokeRepo(new ArrayList<>());
+
 
         URL getUrl = new URL("https://api.chucknorris.io/jokes/random");
         HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
@@ -31,14 +39,13 @@ public class JokesController {
 
             in.close();
             JSONObject masterData = new JSONObject(jsonResponseData.toString());
-            System.out.println(masterData.get("value"));
-//            System.out.println("Current elevation " + masterData.get("elevation"));
-//            System.out.println("Current generationtime_ms " + masterData.get("generationtime_ms"));
+//            System.out.println(masterData.get("value"));
 
-//            JSONObject currentWeatherObj = (JSONObject) masterData.get("current_weather");
-//
-//            System.out.println("Current temperature " + currentWeatherObj.get("temperature"));
-//            System.out.println("Current windspeed " + currentWeatherObj.get("windspeed"));
+            jokesRepo.getJokeRepo().add((String) masterData.get("value"));
+            for(String s:jokesRepo.getJokeRepo()){
+                System.out.println(s);
+            }
+
         } else {
             System.out.println("This is not valid URL- " + responseCode);
         }
