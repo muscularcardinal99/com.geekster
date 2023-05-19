@@ -48,7 +48,7 @@ The project includes a StockController class annotated with @RestController. Thi
 
 ```http
    GET /stock/abovePrice/price/{price}/lowerData/date/{date}
-
+```
 | Parameter | Type     | Description                       |
 | :--------------------------- | :------- | :-------------------------------- |
 | `@PathVariable & @PathVariable `      | `Double String` | Returns all the stock in custom way  |
