@@ -31,4 +31,8 @@ public class RestaurantController {
     public ResponseEntity<String> updateRes(@RequestBody Restaurant res,@PathVariable Integer id){
         return restaurantServices.updateData(res,id);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteById(@PathVariable Integer id){
+        return restaurantServices.deleteById(id);
+    }
 }

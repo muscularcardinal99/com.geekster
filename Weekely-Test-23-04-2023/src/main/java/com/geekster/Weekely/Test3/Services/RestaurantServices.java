@@ -43,4 +43,12 @@ public class RestaurantServices {
             return new ResponseEntity<>("Restaurant does not exist!!!!!!!",HttpStatus.BAD_REQUEST);
         }
     }
+
+    public ResponseEntity<String> deleteById(Integer id) {
+
+        if(restaurantRepo.existsById(id)){
+            restaurantRepo.deleteById(id);
+            return new ResponseEntity<>("Deleted Sucess fully!!!!!", HttpStatus.OK);
+        }else return new ResponseEntity<>("Can not find Resturante !!!!!!!!",HttpStatus.BAD_REQUEST);
+    }
 }
