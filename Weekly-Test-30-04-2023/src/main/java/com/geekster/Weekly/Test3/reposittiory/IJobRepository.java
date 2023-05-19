@@ -19,4 +19,6 @@ public interface IJobRepository extends CrudRepository<Job,Integer> {
     @Modifying
     @Query(value = "update JOB set salary = :salary where id = :id",nativeQuery = true)
     void updateSalaryById(Double salary, Integer id);
+
+    List<Job> findAllByJobType(String jobType);
 }

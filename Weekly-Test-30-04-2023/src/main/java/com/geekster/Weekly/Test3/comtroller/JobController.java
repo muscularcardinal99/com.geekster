@@ -34,4 +34,8 @@ public class JobController {
     public List<Job> getBySalaryAbove(@PathVariable Double salary){
         return jobServices.getAllJobsSalaryGreaterThan(salary);
     }
+    @GetMapping(value = "/jobType/{jobType}")
+    public List<Job> getByJobType(@PathVariable String jobType){
+        return jobServices.getByJobType(jobType);
+    }
 }

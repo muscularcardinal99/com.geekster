@@ -33,4 +33,8 @@ public class JobServices {
     public void updateSalary(Double salary, Integer id) {
         jobRepository.updateSalaryById(salary,id);
     }
+
+    public List<Job> getByJobType(String jobType) {
+        return jobRepository.findAllByJobType(jobType);
+    }
 }
