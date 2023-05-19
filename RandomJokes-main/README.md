@@ -1,4 +1,17 @@
+# Hi, I'm Abhishek Kushwaha! 👋
 
+
+## Authors
+
+- [@muscularcardinal99](https://www.github.com/muscularcardinal99)
+
+
+## 🚀 About Me
+I'm a Java developer...
+
+
+## 🛠 Skills
+Java, HTML, Springboot, MySQL...
 # Random jokes joke using data source 
 Description of Java Project: Random Jokes using an Exposed API
 
